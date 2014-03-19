@@ -1,0 +1,21 @@
+{
+    "name": "fengqi/Hanzi",
+    "type": "library",
+    "description": "Get hanzi pinyin or cht convert to chs",
+    "keywords": ["pinyin", "hanzi", "jianti", "fanti"],
+    "homepage": "https://github.com/lyf362345/Hanzi",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "fengqi",
+            "email": "lyf362345@gmail.com",
+            "homepage": "http://fengqi.me"
+        }
+    ],
+    "autoload": {
+        "classmap": ["Hanzi.php"],
+        "psr-0": {
+            "Detection": "namespaced/"
+        }
+    }
+}
