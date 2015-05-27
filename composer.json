@@ -1,6 +1,5 @@
 {
     "name": "fengqi/hanzi",
-    "type": "library",
     "description": "Get hanzi pinyin or cht convert to chs",
     "keywords": ["pinyin", "hanzi", "jianti", "fanti"],
     "homepage": "https://github.com/fengqi/Hanzi",
