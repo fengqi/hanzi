@@ -1,11 +1,12 @@
-<?php
+<?php namespace fengqi\Hanzi;
+
 /**
- * #description
+ * 获取汉字的拼音, 或者简繁体转换.
  *
  * @author  fengqi <lyf362345@gmail.com>
- * @version $Id: $
+ * @link    https://github.com/fengqi/hanzi
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
  */
-
 class Hanzi
 {
     /**

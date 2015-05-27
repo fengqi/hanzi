@@ -1,11 +1,12 @@
-<?php
+<?php namespace fengqi\Hanzi;
+
 /**
  * 简体和拼音的对照表
  *
  * @author  fengqi <lyf362345@gmail.com>
- * @version $Id: $
+ * @link    https://github.com/fengqi/hanzi
+ * @license http://www.opensource.org/licenses/mit-license.php MIT
  */
-
 return array (
     '吖' => 'a',
     '阿' => 'a',
