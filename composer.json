@@ -1,8 +1,8 @@
 {
     "name": "fengqi/hanzi",
-    "description": "Get hanzi pinyin or cht convert to chs",
-    "keywords": ["pinyin", "hanzi", "jianti", "fanti"],
-    "homepage": "https://github.com/fengqi/Hanzi",
+    "description": "获取汉字的拼音, 或者简繁体转换.",
+    "keywords": ["pinyin", "hanzi", "jianti", "fanti", "拼音", "汉字", "简体", "繁体"],
+    "homepage": "https://github.com/fengqi/hanzi",
     "license": "MIT",
     "authors": [
         {
