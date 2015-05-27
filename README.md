@@ -9,7 +9,7 @@ Hanzi
 composer require fengqi/hanzi:dev-master
 ````
 
-# 使用示例:
+# 使用示例
 ````
 use fengqi\Hanzi\Hanzi;
 
