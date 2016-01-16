@@ -6,7 +6,7 @@ Hanzi
 # 安装方法
 命令行下, 执行 composer 命令安装:
 ````
-composer require fengqi/hanzi:dev-master
+composer require fengqi/hanzi
 ````
 
 # 使用示例
