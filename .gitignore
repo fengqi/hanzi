@@ -1,1 +1,7 @@
-.idea/
+/vendor
+composer
+composer.phar
+composer.lock
+.DS_Store
+._.DS_Store
+Thumbs.db

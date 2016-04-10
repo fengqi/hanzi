@@ -48,7 +48,6 @@ class Hanzi
                 $tmp = self::query(substr($chinese, $i, 3), 1);
                 $return['py'] .= substr($tmp, 0, 1);
                 $return['pinyin'] .= $tmp;
-
                 $i += 2;
             }
             else {
@@ -137,5 +136,4 @@ class Hanzi
 
         return self::$$dictName;
     }
-
 }
