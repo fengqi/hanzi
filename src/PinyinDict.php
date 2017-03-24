@@ -19581,7 +19581,7 @@ return array (
     '麞' => 'zhang',
     '涱' => 'zhang',
     '傽' => 'zhang',
-    '长' => 'zhang',
+    '长' => 'chang',
     '仧' => 'zhang',
     '長' => 'zhang',
     '镸' => 'zhang',
