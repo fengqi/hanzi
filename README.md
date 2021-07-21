@@ -27,3 +27,7 @@ var_dump(Hanzi::turn($cht, true));
 
 # 关于部分无法正确转换
 > 可以自行补充 src/ 下 Dict.php 中的字典
+
+# 关于多音字
+
+> 暂不支持
