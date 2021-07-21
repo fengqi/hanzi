@@ -14,7 +14,7 @@ class Hanzi
      *
      * @var string
      */
-    const VERSION = '0.1.2';
+    const VERSION = '0.1.3';
 
     /**
      * 拼音字典
@@ -46,7 +46,7 @@ class Hanzi
         for ($i = 0; $i < $len; $i++) {
             if (ord(substr($chinese, $i, 1)) > 127) {
                 $tmp = self::query(substr($chinese, $i, 3), 1);
-                $return['py'] .= substr($tmp, 0, 1);
+                $return['py'] .= mb_substr($tmp, 0, 1);
                 $return['pinyin'] .= $tmp;
                 $i += 2;
             }
