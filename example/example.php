@@ -2,6 +2,8 @@
 
 use fengqi\Hanzi\Hanzi;
 
+include '../vendor/autoload.php';
+
 $chs = '中国人';
 $cht = '中國人';
 
