@@ -14,7 +14,7 @@ class Hanzi
      *
      * @var string
      */
-    const VERSION = '0.1.3';
+    const VERSION = '0.1.4';
 
     /**
      * 拼音字典
@@ -40,19 +40,19 @@ class Hanzi
     static public function pinyin($chinese)
     {
         $chinese = trim($chinese);
-        $len = strlen($chinese);
+        $len = mb_strlen($chinese);
         $return = array('py' => '', 'pinyin' => '');
 
         for ($i = 0; $i < $len; $i++) {
-            if (ord(substr($chinese, $i, 1)) > 127) {
-                $tmp = self::query(substr($chinese, $i, 3), 1);
-                $return['py'] .= mb_substr($tmp, 0, 1);
-                $return['pinyin'] .= $tmp;
-                $i += 2;
+            $tmp = mb_substr($chinese, $i, 1);
+            if (ord($tmp) > 127) {
+                $py = self::query($tmp, 1);
+                $return['py'] .= mb_substr($py, 0, 1);
+                $return['pinyin'] .= $py;
             }
             else {
-                $return['py'] .= substr($chinese, $i, 1);
-                $return['pinyin'] .= substr($chinese, $i, 1);
+                $return['py'] .= $tmp;
+                $return['pinyin'] .= $tmp;
             }
         }
 
@@ -72,15 +72,15 @@ class Hanzi
         $chinese = trim($chinese);
         $reverse = (bool)$reverse;
 
-        $len = strlen($chinese);
+        $len = mb_strlen($chinese);
         $return = '';
         for ($i = 0; $i < $len; $i++) {
-            if (ord(substr($chinese, $i, 1)) > 127) {
-                $return .= self::query(substr($chinese, $i, 3), $reverse ? 3 : 2);
-                $i += 2;
+            $tmp = mb_substr($chinese, $i, 1);
+            if (ord($tmp) > 127) {
+                $return .= self::query($tmp, $reverse ? 3 : 2);
             }
             else {
-                $return .= substr($chinese, $i, 1);
+                $return .= $tmp;
             }
         }
 
@@ -102,19 +102,16 @@ class Hanzi
             case 1:
                 $dict = self::initDict('pinyin');
                 return isset($dict[$string]) ? $dict[$string] : $string;
-                break;
 
             // 简体转繁体
             case 2:
                 $dict = array_flip(self::initDict('hanzi'));
                 return isset($dict[$string]) ? $dict[$string] : $string;
-                break;
 
             // 繁体转简体
             case 3:
                 $dict = self::initDict('hanzi');
                 return isset($dict[$string]) ? $dict[$string] : $string;
-                break;
         }
 
         return '';
