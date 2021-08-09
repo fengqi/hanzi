@@ -15,5 +15,8 @@
         "psr-4": {
             "fengqi\\Hanzi\\": "src"
         }
+    },
+    "require": {
+        "ext-mbstring": "*"
     }
 }
